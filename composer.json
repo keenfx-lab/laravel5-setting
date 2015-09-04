@@ -1,7 +1,7 @@
 {
-    "name": "thetispro/laravel5-setting",
+    "name": "dakala/laravel5-setting",
     "description": "Persistent configuration settings for Laravel 5 - Create, Read, Update and Delete settings stored in files using JSON",
-    "homepage": "https://github.com/thetispro/laravel5-setting",
+    "homepage": "https://github.com/dakala/laravel5-setting",
     "keywords": ["laravel", "config", "setting"],
     "license": "MIT",
     "authors": [
@@ -12,6 +12,10 @@
         {
             "name": "Eric Leroy",
             "email": "thetispro@me.com"
+        },
+        {
+            "name": "Deji Akala",
+            "email": "dejiakala@gmail.com"
         }
     ],
     "require": {
