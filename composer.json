@@ -1,5 +1,5 @@
 {
-    "name": "dakala/laravel5-setting",
+    "name": "keenfx-lab/laravel5-setting",
     "description": "Persistent configuration settings for Laravel 5 - Create, Read, Update and Delete settings stored in files using JSON",
     "homepage": "https://github.com/dakala/laravel5-setting",
     "keywords": ["laravel", "config", "setting"],
@@ -17,6 +17,10 @@
         {
             "name": "Deji Akala",
             "email": "dejiakala@gmail.com"
+        },
+        {
+            "name": "Ty Noryan",
+            "email": "support@keenfx.com"
         }
     ],
     "require": {
