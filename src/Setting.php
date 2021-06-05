@@ -119,9 +119,9 @@ class Setting {
 
         $ts = microtime(true);
 
-        if($ts !== array_get($this->settings, $key, $ts))
+        if($ts !== \Arr::get($this->settings, $key, $ts))
         {
-            return array_get($this->settings, $key);
+            return \Arr::get($this->settings, $key);
         }
 
         if ( ! is_null($this->fallback) and $this->fallback->fallbackHas($key))
@@ -140,7 +140,7 @@ class Setting {
      */
     public function set($key, $value)
     {
-        array_set($this->settings,$key,$value);
+        \Arr::set($this->settings,$key,$value);
         $this->save($this->path, $this->filename);
         $this->load($this->path, $this->filename);
     }
@@ -152,7 +152,7 @@ class Setting {
      */
     public function forget($deleteKey)
     {
-        array_forget($this->settings,$deleteKey);
+        \Arr::forget($this->settings,$deleteKey);
         $this->save($this->path, $this->filename);
         $this->load($this->path, $this->filename);
     }
@@ -166,11 +166,11 @@ class Setting {
     {
         $default = microtime(true);
 
-        if($default == array_get($this->settings, $searchKey, $default) and !is_null($this->fallback))
+        if($default == \Arr::get($this->settings, $searchKey, $default) and !is_null($this->fallback))
         {
             return $this->fallback->fallbackHas($searchKey);
         }
-        return $default !== array_get($this->settings, $searchKey, $default);
+        return $default !== \Arr::get($this->settings, $searchKey, $default);
     }
 
     /**
@@ -234,7 +234,7 @@ class Setting {
     {
         foreach ($data as $key => $value)
         {
-            array_set($this->settings,$key,$value);
+            \Arr::set($this->settings,$key,$value);
         }
 
         $this->save($this->path, $this->filename);
